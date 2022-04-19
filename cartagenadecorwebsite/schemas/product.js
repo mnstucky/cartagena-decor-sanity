@@ -34,27 +34,16 @@ export default {
       ],
     },
     {
-      title: 'Tags',
-      name: 'tags',
-      type: 'array',
-      of: [
-        {
-          type: 'string',
-        },
-      ],
-      options: {
-        layout: 'tags',
-      },
-    },
-    {
       name: 'description',
       title: 'Description',
-      type: 'localeString',
+      type: 'array',
+        of: [{type: 'block'}]
     },
     {
       name: 'features',
       title: 'Features',
-      type: 'localeString',
+      type: 'array',
+        of: [{type: 'block'}]
     },
     {
       name: 'categories',
@@ -67,13 +56,25 @@ export default {
         },
       ],
     },
+    {
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [
+        {
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    },
   ],
 
   preview: {
     select: {
       title: 'title',
-      manufactor: 'manufactor.title',
-      media: 'defaultProductVariant.images[0]',
+      media: 'images[0]',
     },
   },
 }

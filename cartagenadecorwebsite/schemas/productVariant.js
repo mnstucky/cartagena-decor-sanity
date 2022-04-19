@@ -14,6 +14,11 @@ export default {
       type: 'number',
     },
     {
+      title: 'Quantity',
+      name: 'quantity',
+      type: 'number',
+    },
+    {
       name: 'images',
       title: 'Images',
       type: 'array',
